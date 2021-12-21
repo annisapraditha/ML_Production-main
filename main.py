@@ -27,9 +27,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     chosen_model = request.form['select_model']
-    model_dict = {'hyperModel'   :   'static/MLModule/hyperModel.h5',
-                  'LRSModel'     :   'static/MLModule/LRSModel.h5',
-                  'tugasml'      :   'static/MLModule/tugasml.h5',
+    model_dict = {'tugasml'      :   'static/MLModule/tugasml.h5',
                   'MobileNet'    :   'static/MLModule/MobileNet.h5',
                   'CNN'          :   'static/MLModule/CNN.h5',}
     if chosen_model in model_dict:
